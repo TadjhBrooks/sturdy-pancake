@@ -1,0 +1,11 @@
+cloned repo
+root: add /pacakges/<client-name> && /packages/<server-name>
+client: yarn create react-app sturdy-pancake-client --template typescript (might have to move folder into client)
+server: yarn init
+root: yarn ini
+root: add to package.json - "workspaces": ["packages/*"]
+.gitignore for all packages in monorepo and root
+root: yarn install
+root: add script - "client-start": "yarn workspace sturdy-pancake-client start"
+root: add script - "start" : "yarn client-start"
+root: yarn start

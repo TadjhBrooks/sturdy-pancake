@@ -1,0 +1,19 @@
+{
+  "name": "sturdy-pancake",
+  "version": "0.1.0",
+  "description": "Random plugin",
+  "main": "index.js",
+  "repository": "https://github.com/TadjhBrooks/sturdy-pancake.git",
+  "author": "TadjhBrooks <tadjh.brooks@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "client-start": "yarn workspace sturdy-pancake-client start",
+    "start": "yarn client-start",
+    "client-build": "yarn workspace sturdy-pancake-client build",
+    "build": "yarn client-build"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

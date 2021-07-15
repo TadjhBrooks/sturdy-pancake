@@ -1,0 +1,10 @@
+{
+  "name": "sturdy-pancake-server",
+  "version": "0.1.0",
+  "main": "server.js",
+  "license": "MIT",
+  "description": "Random plugin database fetching",
+  "repository": "https://github.com/TadjhBrooks/sturdy-pancake.git",
+  "author": "TadjhBrooks <tadjh.brooks@gmail.com>",
+  "private": true
+}
