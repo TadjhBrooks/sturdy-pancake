@@ -16,12 +16,22 @@ function App({ database }: AppProps) {
   const title = 'Rediscover';
   const description =
     'Rediscover creative audio plugins you forgot about with a click of a button.';
+  const action = 'Rediscover';
   const copyright = `\u00A9 Rediscover ${new Date().getFullYear()}.`;
 
+  /**
+   * Get random element from array
+   * @param array Array
+   * @returns
+   */
   function getOneFromArray(array: any[]) {
     return array[Math.floor(Math.random() * array.length)];
   }
 
+  /**
+   * Update state with new element
+   * @param array Array
+   */
   function handleGetOne(array: any[]) {
     const element = getOneFromArray(array);
     setText(element);
@@ -39,7 +49,7 @@ function App({ database }: AppProps) {
         <Card>
           <p className="w-96">{description}</p>
           <div>
-            <Button onClick={() => handleGetOne(database)}>Rediscover</Button>
+            <Button onClick={() => handleGetOne(database)}>{action}</Button>
           </div>
         </Card>
         <Accordian label="See All Plugins">
@@ -48,11 +58,12 @@ function App({ database }: AppProps) {
       </main>
       <footer className="max-w-screen-lg text-center py-5 text-black text-opacity-90">
         {copyright}
-        {/* <Input label="Add Plugin" placeholder="Plugin Name" action="Add" /> */}
-        {/* <Dropdown label="Remove Plugin" options={database} action="Remove" /> */}
       </footer>
     </div>
   );
 }
+
+/* <Input label="Add Plugin" placeholder="Plugin Name" action="Add" /> */
+/* <Dropdown label="Remove Plugin" options={database} action="Remove" /> */
 
 export default App;
